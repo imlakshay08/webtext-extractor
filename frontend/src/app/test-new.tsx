@@ -8,15 +8,15 @@ export  function WavyBackgroundDemo() {
 
   const [url, setUrl] = useState('');
   const [text, setText] = useState('');
-  const [errorMessage, setErrorMessage] = useState<string | null>(null); // State to store error message
+  const [errorMessage, setErrorMessage] = useState<string | null>(null); 
 
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/get_text', { url });
       setText(response.data.text);
-    } catch (error: unknown) { // Explicitly specify the type of error
-      if (axios.isAxiosError(error)) { // Check if the error is an AxiosError
+    } catch (error: unknown) { 
+      if (axios.isAxiosError(error)) { 
         setErrorMessage(error.response?.data?.error || 'An error occurred');
       } else {
         setErrorMessage('An error occurred');
