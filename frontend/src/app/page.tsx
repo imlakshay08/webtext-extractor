@@ -1,10 +1,8 @@
 
-import { WavyBackgroundDemo } from './test-new'; // Assuming correct path
+import { WavyBackgroundDemo } from './test-new';
 
 export default function Home() {
-  
-;
-  
+;  
   return (
     <main>
       <WavyBackgroundDemo />
