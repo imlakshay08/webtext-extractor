@@ -36,11 +36,7 @@ cd your-repository
  ```bash
 npm install
 ```
-4. Install backend dependencies.
 
- ```bash
- pip install -r requirements.txt
- ```
 ### Usage
 
 1. Start the Flask backend server.
